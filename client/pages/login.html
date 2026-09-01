@@ -1,65 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="th">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log In — UniBorrow</title>
-    <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/pages.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UniBorrow - เข้าสู่ระบบ</title>
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/pages.css">
 </head>
 <body>
-    <header class="navbar">
-        <div class="container navbar-inner">
-            <a href="index.html" class="logo">UniBorrow</a>
-            <nav class="nav-links">
-                <a href="browse.html">Browse</a>
-                <a href="my-items.html">My Items</a>
-                <a href="my-borrowings.html">My Borrowings</a>
-            </nav>
-            <div class="nav-actions">
-                <button class="icon-button" aria-label="Notifications">♡</button>
-                <a href="login.html" style="font-size:14px;color:var(--text-secondary);">Log In</a>
-                <a href="profile.html" class="profile-button">Profile</a>
-            </div>
-        </div>
-    </header>
+  <header class="navbar">
+    <div class="logo">
+      <a href="browse.html">UniBorrow</a>
+    </div>
+    <nav class="nav-links">
+      <a href="browse.html">ค้นหาสิ่งของ</a>
+      <div id="user-status" style="display: inline-flex; gap: 15px; align-items: center;"></div>
+    </nav>
+  </header>
 
-    <main>
-        <div class="container auth-wrap">
-            <div class="form-card">
-                <span class="section-label">Welcome back</span>
-                <h1 style="margin-top:8px;font-size:26px;letter-spacing:-0.6px;">Log in to UniBorrow</h1>
-                <p style="color:var(--text-secondary);font-size:14px;margin-top:8px;margin-bottom:28px;">
-                    ใช้อีเมลมหาวิทยาลัยของคุณเพื่อเข้าสู่ระบบ
-                </p>
-                <form id="loginForm">
-                    <div class="field">
-                        <label for="email">University Email</label>
-                        <input type="email" id="email" placeholder="[email protected]" required>
-                    </div>
-                    <div class="field">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" placeholder="••••••••" required>
-                    </div>
-                    <button type="submit" class="full-button">Log In</button>
-                </form>
-                <p class="form-note">ยังไม่มีบัญชี? <a href="register.html" style="color:var(--accent);">สมัครสมาชิก</a></p>
-            </div>
-        </div>
+  <main class="container" style="max-width: 400px; margin: 50px auto; background: #fff; padding: 25px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+    <h2 style="text-align: center;">เข้าสู่ระบบ</h2>
+    
+    <form id="login-form">
+      <div style="margin-bottom: 15px;">
+        <label for="email" style="display: block; margin-bottom: 5px;">อีเมลนักศึกษา</label>
+        <input type="email" id="email" required placeholder="example@student.ac.th" style="width: 100%; padding: 8px; box-sizing: border-box;">
+      </div>
 
-    </main>
-    <footer class="footer">
-        <div class="container footer-inner">
-            <div>
-                <strong>UniBorrow</strong>
-                <p>Campus Item Sharing Platform</p>
-            </div>
-            <span>© 2026 UniBorrow</span>
-        </div>
-    </footer>
+      <div style="margin-bottom: 20px;">
+        <label for="password" style="display: block; margin-bottom: 5px;">รหัสผ่าน</label>
+        <input type="password" id="password" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+      </div>
 
-    <script src="../js/items.js"></script>
-    <script src="../js/app.js"></script>
+      <button type="submit" style="width: 100%; background: #007bff; color: white; border: none; padding: 10px; border-radius: 4px; font-weight: bold; cursor: pointer;">เข้าสู่ระบบ</button>
+    </form>
+    
+    <p style="text-align: center; margin-top: 15px; font-size: 14px;">
+      ยังไม่มีบัญชี? <a href="register.html">สมัครสมาชิก</a>
+    </p>
+  </main>
+
+  <script src="../js/app.js"></script>
+  <script src="../js/items.js"></script>
 </body>
 </html>
